@@ -9,7 +9,7 @@
 using namespace std;
 typedef long long ll;
 
-struct treap {
+struct treap { 
 	typedef struct tNode {
 		tNode *l = NULL, *r = NULL;
 		int X, Y, subSize = 0;
