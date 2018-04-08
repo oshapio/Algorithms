@@ -4,14 +4,16 @@
 #include <vector>
 #include <cmath>
 #include <algorithm>
-#include <string> 
+#include <string>
 
 using namespace std;
 typedef long long ll;
 
-struct treap { 
+struct treap {
+private:
 	typedef struct tNode {
 		tNode *l = NULL, *r = NULL;
+		
 		int X, Y, subSize = 0;
 		tNode() {}
 		tNode(int x) {
@@ -26,7 +28,7 @@ struct treap {
 	} *node;
 	int getSize(node lead) { return lead ? lead->subSize : 0; }
 	tNode * root = NULL;
-	treap() { root = NULL; }
+	
 	void split(node lead, node & left, node & right, int key) {
 		left = NULL; right = NULL;
 		if (!lead) return;
@@ -62,6 +64,8 @@ struct treap {
 		}
 		else return kTh(lead->l, K);
 	}
+public:
+	treap() { root = NULL; }
 	void insert(int key) {
 		node lDum = NULL, rDum = NULL;
 		split(root, lDum, rDum, key);
@@ -116,3 +120,4 @@ int main()
 	}
 	return 0;
 }
+
