@@ -4,7 +4,7 @@
 #include <vector>
 #include <cmath>
 #include <algorithm>
-#include <string>
+#include <string> 
 
 using namespace std;
 typedef long long ll;
@@ -116,4 +116,3 @@ int main()
 	}
 	return 0;
 }
-
