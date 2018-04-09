@@ -74,7 +74,7 @@ int pollardsRhoDL(int g, int alpha, int order, int N, int a = 0, int b = 0, int 
 
 		fast = getNext(getNext(fast, g, alpha, order, N), g, alpha, order, N);
 
-		if (slow[0] == fast[0]) {
+		if (slow[0] == fast[0]) {	
 			int rem = (slow[2] - fast[2]);
 			if (rem == 0) {
 				//cout << "Can't find solution\n";
