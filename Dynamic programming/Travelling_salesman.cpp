@@ -1,4 +1,3 @@
-// Example program
 #include <bits/stdc++.h>
 #include <ctime>
 using namespace std;
